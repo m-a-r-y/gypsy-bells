@@ -1,133 +1,33 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Gypsy Bells</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            $( "#startDate" ).datepicker();
-            $( "#endDate" ).datepicker();
-        });
-    </script>
+<head>
+    <meta charset="utf-8">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+
+    <!-- load angular, nganimate, and ui-router -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="ui-bootstrap-tpls-0.11.2.js"></script>
+    <script src="app.js"></script>
+
 </head>
-<body>
 
-<form class="form-horizontal" role="form">
-    <div class="form-group">
-        <h1 class="col-sm-6 col-sm-offset-2">Your Information</h1>
-    </div>
-    <div class="form-group">
-        <label for="userName" class="col-sm-2 control-label">Your Name</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="userName" placeholder="Name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="yourEmail" class="col-sm-2 control-label">Your Email</label>
-        <div class="col-sm-4">
-            <input type="email" class="form-control" id="yourEmail" placeholder="Email">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="tripName" class="col-sm-2 control-label">Trip Name</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="tripName" placeholder="Trip Name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="itinerary" class="col-sm-2 control-label">Itinerary</label>
-        <div class="col-sm-6">
-            <textarea class="form-control" rows="10" id="itinerary"></textarea>
-        </div>
-    </div>
+<!-- apply our angular app -->
+<body ng-app="gypsyBells">
 
-    <div class="form-group">
-        <label for="startDate" class="col-sm-2 control-label">Start Date:</label>
-        <div class="col-sm-4">
-            <p><input type="text" id="startDate"></p>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="endDate" class="col-sm-2 control-label">End Date:</label>
-        <div class="col-sm-4">
-            <p><input type="text" id="endDate"></p>
-        </div>
-    </div>
+    <div class="container">
 
-    <div class="form-group">
-        <div class="col-sm-4 col-sm-offset-2">
-            <button class="btn btn-success">READY!</button>
-        </div>
-    </div>
-</form>
+        <!-- views will be injected here -->
+        <div ui-view></div>
 
-
-
-<form class="form-horizontal" role="form">
-    <div class="form-group">
-        <h1 class="col-sm-6 col-sm-offset-2">Emergency Contacts</h1>
     </div>
-    <div class="form-group">
-        <h4 class="col-sm-6 col-sm-offset-2">Emergency Contact #1</h4>
-    </div>
-    <div class="form-group">
-        <label for="ecName" class="col-sm-2 control-label">Name</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="ecName" placeholder="Name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="ecEmail" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-4">
-            <input type="email" class="form-control" id="ecEmail" placeholder="Email">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <h4 class="col-sm-6 col-sm-offset-2">Emergency Contact #2</h4>
-    </div>
-    <div class="form-group">
-        <label for="ecName" class="col-sm-2 control-label">Name</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="ecName" placeholder="Name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="ecEmail" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-4">
-            <input type="email" class="form-control" id="ecEmail" placeholder="Email">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <h4 class="col-sm-6 col-sm-offset-2">Emergency Contact #3</h4>
-    </div>
-    <div class="form-group">
-        <label for="ecName" class="col-sm-2 control-label">Name</label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" id="ecName" placeholder="Name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="ecEmail" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-4">
-            <input type="email" class="form-control" id="ecEmail" placeholder="Email">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-sm-4 col-sm-offset-2">
-            <button class="btn btn-success">SET!</button>
-        </div>
-    </div>
-</form>
-
 
 </body>
 </html>

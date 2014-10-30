@@ -1,0 +1,46 @@
+<div class="form-group">
+    <h2 class="text-center">Your Information</h2>
+</div>
+<div class="form-group">
+    <label for="userName" class="control-label">Your Name</label>
+    <input type="text" class="form-control" id="userName" placeholder="Name" ng-model="formData.name">
+</div>
+<div class="form-group">
+    <label for="yourEmail" class="control-label">Your Email</label>
+    <input type="text" class="form-control" id="userEmail" placeholder="Email" ng-model="formData.email">
+</div>
+<div class="form-group">
+    <label for="tripName" class="control-label">Trip Name</label>
+    <input type="text" class="form-control" id="tripName" placeholder="Trip Name" ng-model="formData.trip">
+</div>
+<div class="form-group">
+    <label for="itinerary" class="control-label">Itinerary</label>
+    <textarea class="form-control" rows="10" id="itinerary" ng-model="formData.itinerary"
+    placeholder="Where are you staying? What activities do you have planned? Routes?"></textarea>
+</div>
+
+<div ng-controller="startDate">
+    <div class="col-md-6">
+      <pre>Start: <em>{{formData.start | date:'fullDate' }}</em></pre>
+    </div>
+    <div style="display:inline-block; min-height:290px;">
+        <datepicker ng-model="formData.start" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
+    </div>
+</div>
+
+<div ng-controller="endDate">
+    <div class="col-md-6">
+      <pre>End: <em>{{formData.end | date:'fullDate' }}</em></pre>
+    </div>
+    <div style="display:inline-block; min-height:290px;">
+        <datepicker ng-model="formData.end" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
+    </div>
+</div>
+
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.contacts" class="btn btn-block btn-success">Next Section
+    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>

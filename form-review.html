@@ -1,0 +1,20 @@
+<h2 class="text-center">Trip Overview</h2>
+
+<div class="">
+    <h4>Your Information</h4>
+    <p>Your Name: {{formData.name}}</p>
+    <p>Your Email: {{formData.email}}</p>
+    <p>Trip Name: {{formData.trip}}</p>
+    <p>Itinerary: {{formData.itinerary}}</p>
+    <p>Start: {{formData.start | date:'fullDate' }}</p>
+    <p>End: {{formData.end | date:'fullDate' }}</p>
+</div>
+
+<!-- <div class="">
+    <label>Emergency Contacts</label>
+</div> -->
+
+<div class="text-center">
+    <span class="glyphicon glyphicon-heart"></span>
+    <button type="submit" class="btn btn-success">Let's Go!</button>
+</div>
