@@ -10,11 +10,25 @@
     <p>End: {{formData.end | date:'fullDate' }}</p>
 </div>
 
-<!-- <div class="">
-    <label>Emergency Contacts</label>
-</div> -->
+<hr/>
+<div class="">
+    <h4 class="text-center">Emergency Contacts</h4>
+    <label>Emergency Contact #1</label>
+    <p>Name: {{formData.ecName1}}</p>
+    <p>Email: {{formData.ecEmail1}}</p>
+    <p>Comment: {{formData.comment1}}</p>
+    <label>Emergency Contact #2</label>
+    <p>Name: {{formData.ecName2}}</p>
+    <p>Email: {{formData.ecEmail2}}</p>
+    <p>Comment: {{formData.comment2}}</p>
+    <label>Emergency Contact #3</label>
+    <p>Name: {{formData.ecName3}}</p>
+    <p>Email: {{formData.ecEmail3}}</p>
+    <p>Comment: {{formData.comment3}}</p>
+</div>
 
 <div class="text-center">
     <span class="glyphicon glyphicon-heart"></span>
     <button type="submit" class="btn btn-success">Let's Go!</button>
 </div>
+
